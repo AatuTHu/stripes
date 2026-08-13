@@ -1,0 +1,8 @@
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
+[Colors:View]
+BackgroundNormal=2d2d2d
+ForegroundNormal=255,255,255
+

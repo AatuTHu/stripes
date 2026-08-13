@@ -1,0 +1,20 @@
+[CompactMode]
+MaximumTextWidthIndex=3
+
+[General]
+Version=202
+ViewPropsTimestamp=2026,8,10,19,31,16.222
+
+[IconsMode]
+IconSize=48
+PreviewSize=80
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,glycin-heif,glycin-image-rs,glycin-jxl,glycin-svg
+
+[UiSettings]
+ColorScheme=BreezeDark

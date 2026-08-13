@@ -1,0 +1,13 @@
+[Default Applications]
+x-scheme-handler/rshub=jagex-launcher.desktop
+x-scheme-handler/discord-409416265891971072=discord-409416265891971072.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-X75KT3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-X75KT3.desktop
+message/rfc822=userapp-Thunderbird-X75KT3.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-60OLT3.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-X75KT3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-X75KT3.desktop;
+message/rfc822=userapp-Thunderbird-X75KT3.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-60OLT3.desktop;
