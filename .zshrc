@@ -6,7 +6,7 @@ setopt autocd extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/aaho/.zshrc'
+zstyle :compinstall filename '/home/aatu/.zshrc'
 export EDITOR="nvim"
 autoload -Uz compinit
 compinit

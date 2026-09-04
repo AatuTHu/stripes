@@ -22,29 +22,13 @@ window#waybar {
 #custom-notification,
 #network,
 #memory,
-#spotify,
+#mpris, 
 #tray {
     background-color: rgba(23, 25, 32, 0.85);
     padding: 3px 14px;
     margin: 6px 3px;
     border: 1px solid rgba(128, 71, 21, 0.25);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#custom-spotify-prev,
-#mpris, 
-#custom-spotify-next {
-  background-color: rgba(23, 25, 32, 0.85);
-    padding: 3px 14px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    border: 1px solid rgba(128, 71, 21, 0.25);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-#custom-spotify-prev {
-  margin-left: 20px;
 }
 
 /* Interactive hover state for modules */
@@ -54,6 +38,7 @@ window#waybar {
 #custom-notification:hover,
 #network:hover,
 #memory:hover,
+#mpris,
 #tray:hover {
     background-color: rgba(35, 39, 50, 0.95);
     border-color: rgba(216, 138, 76, 0.5); /* Amber leaf glow */

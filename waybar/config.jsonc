@@ -1,86 +1,111 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 46,
-    "spacing": 4,
-    "modules-left": [
-        "hyprland/workspaces",
-        "mpris",
+  "layer": "top",
+  "position": "top",
+  "height": 46,
+  "spacing": 4,
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "custom/notification",
+    "custom/update-check",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate"
+  },
+  "mpris": {
+    "format": "{status_icon} {title}",
+    "format-paused": "{status_icon} <i>{title}</i>",
+    "status-icons": {
+      "playing": "󰐊",
+      "paused": "󰏤",
+      "stopped": "󰓛"
+    },
+    "on-click": "playerctl -p spotify previous",
+    "on-click-right": "playerctl -p spotify next",
+    "on-click-middle": "playerctl -p spotify play-pause",
+    "ignored-players": [
+      "firefox",
+      "chromium",
+      "brave"
     ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "pulseaudio",
-        "bluetooth",
-        "custom/notification",
-        "custom/update-check",
-        "tray"
-    ],
-    "hyprland/workspaces": {
-        "format": "{id}",
-        "on-click": "activate"
+    "max-length": 40,
+    "interval": 1
+  },
+  "clock": {
+    "format": "  {:%H:%M  %d/%m}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6666'><b><u>{}</u></b></span>"
+      }
     },
-    "mpris": {
-      "format": "{status_icon} {title}",
-      "format-paused": "{status_icon} <i>{title}</i>",
-      "status-icons": {
-        "playing": "󰐊",
-        "paused": "󰏤",
-        "stopped": "󰓛"
-      },
-      "on-click": "playerctl -p spotify play-pause",
-      "on-click-right": "playerctl -p spotify previous",
-      "on-click-middle": "playerctl -p spotify next",
-      "ignored-players": ["firefox", "chromium", "brave"],
-      "max-length": 40,
-      "interval": 1
-    },
-    "clock": {
-        "format": "  {:%H:%M  %d/%m}"
-    },
-    "pulseaudio": {
-        "format": "󰕾 {volume}%",
-        "format-muted": "󰝟 Muted",
-        "on-click": "pavucontrol"
-    },
-    "bluetooth": {
-        "format": " {status}",
-        "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        "format-disabled": "󰂲 Off",
-        "format-off": "󰂲 Off",
-        "interval": 30,
-        "on-click": "alacritty -e bluetui"
-    },
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "󱅫",
-            "none": "󰂜",
-            "dnd-notification": "󰂛",
-            "dnd-none": "󰂛",
-            "inhibited-notification": "󱅫",
-            "inhibited-none": "󰂜",
-            "dnd-inhibited-notification": "󰂛",
-            "dnd-inhibited-none": "󰂛"
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -swb",
-        "on-click-right": "swaync-client -d -swb",
-        "escape": true
-    },
-    "tray": {
-        "spacing": 10
-    },
-    "custom/update-check": {
-        "format": "Update",
-        "exec": "~/.config/waybar/scripts/last-update.sh",
-        "return-type": "json",
-        "interval": 3599,
-        "tooltip": true
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
+  },
+  "pulseaudio": {
+    "format": "󰕾 {volume}%",
+    "format-muted": "󰝟 Muted",
+    "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "format-disabled": "󰂲 Off",
+    "format-off": "󰂲 Off",
+    "interval": 30,
+    "on-click": "alacritty -e bluetui"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂛",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -swb",
+    "on-click-right": "swaync-client -d -swb",
+    "escape": true
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "custom/update-check": {
+    "exec": "~/.config/waybar/scripts/last-update.sh",
+    "return-type": "json",
+    "interval": 3599,
+    "tooltip": true,
+    "signal": 8
+  }
 }
