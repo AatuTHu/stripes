@@ -8,12 +8,11 @@
 }
 
 window#waybar {
-    background-color: rgba(20,21,26, 0.7); /* Deep charcoal night */
-    color: #b0b9c6;            /* Foggy slate gray */
-    border-bottom: 1px solid rgba(128, 71, 21, 0.8); /* Warm amber rust */
+    background-color: rgba(20,21,26, 0.7);
+    color: #b0b9c6;        
+    border-bottom: 1px solid rgba(128, 71, 21, 0.8); 
 }
 
-/* Base module container styling */
 #custom-update-check,
 #workspaces,
 #clock,
@@ -31,7 +30,6 @@ window#waybar {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Interactive hover state for modules */
 #clock:hover,
 #pulseaudio:hover,
 #bluetooth:hover,
@@ -41,10 +39,9 @@ window#waybar {
 #mpris,
 #tray:hover {
     background-color: rgba(35, 39, 50, 0.95);
-    border-color: rgba(216, 138, 76, 0.5); /* Amber leaf glow */
+    border-color: rgba(216, 138, 76, 0.5);
 }
 
-/* Workspaces button styling */
 #workspaces {
     padding: 2px 6px;
 }
@@ -52,35 +49,32 @@ window#waybar {
 #workspaces button {
     padding: 2px 8px;
     margin: 2px 2px;
-    color: #525866; /* Dim rain clouds */
+    color: #525866;
     background-color: transparent;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
 }
 
 #workspaces button:hover {
-    color: #e28d5c; /* Copper */
+    color: #e28d5c;
 }
 
 #workspaces button.active {
-    color: #d8a657; /* Fallen leaf gold */
-}
+    color: #d8a657;}
 
 #workspaces button.urgent {
-    color: #c54b4b; /* Autumn crimson */
-}
+    color: #c54b4b;}
 
-/* Rainy autumn accents */
-#clock { color: #8ba4b0; }                /* Stormy rain blue */
-#pulseaudio { color: #8f9a6c; }           /* Moss green */
-#bluetooth { color: #7393a7; }            /* Wet slate */
-#custom-notification { color: #e28d5c; }   /* Burnt copper */
-#network { color: #d8a657; }              /* Autumn leaf gold */
-#memory { color: #c87a4a; }               /* Warm amber */
-#tray { color: #a0a8b6; }                 /* Fog gray */
-#custom-update-check { color: #d8a657; }  /* Autumn leaf gold */
+#clock { color: #8ba4b0; }               
+#pulseaudio { color: #8f9a6c; }          
+#bluetooth { color: #7393a7; }        
+#custom-notification { color: #e28d5c; }  
+#network { color: #d8a657; }            
+#memory { color: #c87a4a; }             
+#tray { color: #a0a8b6; }             
+#custom-update-check { color: #d8a657; } 
 
 #custom-update-check.warning {
-    color: #c54b4b;                       /* Autumn crimson */
+    color: #c54b4b;                     
     border-color: rgba(197, 75, 75, 0.4);
 }
